@@ -20,8 +20,13 @@ function updateMobilePrice(product, price, num) {
 function updateTotalPrice(){
     const totalMobilePrice = getProductPrice('phone');
     const totalCasePrice = getProductPrice('case');
-    const totalPrice = totalCasePrice + totalMobilePrice;
-    console.log(totalPrice);
+    const subTotalPrice = totalMobilePrice + totalCasePrice;
+    const taxAmount = subTotalPrice/5;
+    const totalPrice = subTotalPrice + taxAmount;
+
+    document.getElementById("sub-total").innerText = subTotalPrice;
+    document.getElementById("tax-amount").innerText = taxAmount;
+    document.getElementById("total-price").innerText = totalPrice;
 }
 
 function getProductPrice(product){
