@@ -39,7 +39,7 @@ document.getElementById('phone-plus').addEventListener('click', function () {
 });
 
 document.getElementById("phone-minus").addEventListener('click', function () {
-    updateMobilePrice("phone", false);
+    updateMobilePrice("phone", 59, false);
 })
 
 document.getElementById('case-plus').addEventListener('click', function () {
